@@ -23,6 +23,8 @@ _testmain.go
 *.test
 *.prof
 
+*.pprof
+
 # Logs
 logs
 *.log

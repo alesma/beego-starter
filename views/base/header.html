@@ -1,0 +1,21 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="/">Home</a>
+        {{if .InSession}}
+          Welcome, {{.username}}
+        {{end}}
+      </div>
+      <div class="col-sm-6 text-right">
+        {{if .InSession}}
+          <a href="/user/logout">Logout</a>
+          <a href="/user/profile">Profile</a>
+        {{else}}
+          <a href="/user/login/home">Login</a>
+          <a href="/user/register">Register</a>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</header>
