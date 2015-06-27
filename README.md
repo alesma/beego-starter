@@ -6,11 +6,22 @@ Frontend build process uses [Gulp](http://gulpjs.com/), it compiles sass to css 
 # Get it running
 You will need a mysql installation (I am using [mariadb](https://mariadb.org/)).  
 The mysql connector is configured in main.go, which probably needs some changes according to your db setup.  
-Install the go dependencies by running:
+
+Install go dependencies by running:
 ```
-go install
+go get github.com/astaxie/beego github.com/beego/bee github.com/go-sql-driver/mysql github.com/twinj/uuid golang.org/x/crypto/bcrypt gopkg.in/gomail.v1 github.com/twinj/uuid
 ```
 Run it with:
 ```
 bee run
 ```
+
+Gulp runs on nodejs and has its dependencies, install them with npm by running in /static
+```
+npm install
+```
+Run gulp with
+```
+gulp
+```
+
