@@ -16,6 +16,7 @@
             <p>{{.flash.notice}}</p>
           {{end}}
           <form action="/user/login/home" method="POST">
+            {{ .xsrfdata }}
             <div class="form-group">
               <label for="username">Username</label>
               <input type="text" class="form-control" id="username" name="username" placeholder="">

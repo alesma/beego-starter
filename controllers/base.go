@@ -2,6 +2,7 @@ package controllers
 
 import (
   "github.com/astaxie/beego"
+  "html/template"
 )
 
 type baseController struct {
@@ -19,4 +20,7 @@ func (c *baseController) setupView(view string) {
     c.Data["username"] = m["username"] // first name
     c.isLogged = true
   }
+
+  //XSRF
+  c.Data["xsrfdata"] = template.HTML(c.XsrfFormHtml())
 }

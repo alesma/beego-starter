@@ -19,6 +19,7 @@
           <p>{{$val}}</p>
           {{end}}
           <form action="/user/register" method="POST">
+            {{ .xsrfdata }}
             <div class="form-group">
               <label for="firstname">First name</label>
               <input type="text" class="form-control" id="firstname" name="firstname" required placeholder="">
